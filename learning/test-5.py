@@ -20,3 +20,10 @@ for x in list:
 
 for y in range(1,11):
     print (y)
+
+## if-else
+x = 115
+y = 50
+z = 50
+if x > y <= z:       # == ใช้ได้ตัวนี้
+    print "x is the greatest"
