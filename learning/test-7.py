@@ -16,3 +16,4 @@ def simple_addition (num1,num2):
     print answer
 simple_addition(7.5,10)
 simple_addition(num2 = 10,num1 = 80) ##type2
+////////
