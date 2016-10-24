@@ -1,46 +1,17 @@
 ## reading from a csv spreadsheet
-import csv
-with open("X:\THESis\example.csv",'r') as csvfile:
-    readCSV = csv.reader(csvfile, delimiter=',')
+import sys, argparse, csv
+
+# command arguments
+parser = argparse.ArgumentParser(description='csv to postgres',\
+fromfile_prefix_chars="@" )
+parser.add_argument('file', help='csv file to import', action='store')
+args = parser.parse_args()
+csv_file = args.file
+
+# open csv file
+with open(csv_file, 'rb') as csvfile:
+    readCSV = csv.reader(csvfile)
     for row in readCSV:
         print(row)
         print(row[0])
         print(row[0],row[1],row[2],)
-
-
-import csv
-with open('example.csv') as csvfile:
-    readCSV = csv.reader(csvfile, delimiter=',')
-    dates = []
-    colors = []
-    for row in readCSV:
-        color = row[3]
-        date = row[0]
-
-        dates.append(date)
-        colors.append(color)
-
-    print(dates)
-    print(colors)
-
-
-import csv
-with open('example.csv') as csvfile:
-    readCSV = csv.reader(csvfile, delimiter=',')
-    dates = []
-    colors = []
-    for row in readCSV:
-        color = row[3]
-        date = row[0]
-
-        dates.append(date)
-        colors.append(color)
-
-    print(dates)
-    print(colors)
-
-    # now, remember our lists?
-    whatColor = input('What color do you wish to know the date of?:')
-    coldex = colors.index(whatColor)
-    theDate = dates[coldex]
-    print('The date of',whatColor,'is:',theDate)
