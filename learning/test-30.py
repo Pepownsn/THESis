@@ -14,10 +14,8 @@ ftp.cwd('/whyfix/')
 def grabFile():
 
     filename = 'example.txt'
-
     localfile = open(filename, 'wb')
     ftp.retrbinary('RETR ' + filename, localfile.write, 1024)
-
     ftp.quit()
     localfile.close()
 
