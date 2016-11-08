@@ -2,4 +2,6 @@
 import sys
 import time
 print(sys.version)
-time.sleep(4) #timedelay
+time.sleep(0) #timedelay
+
+print 5*"helloworld"
