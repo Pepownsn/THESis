@@ -5,4 +5,4 @@ print(sys.version)
 time.sleep(0) #timedelay
 
 print 5*"helloworld"
-print "rrrr"
+
